@@ -44,14 +44,14 @@ By downloading our dataset, you agree to be bound by and comply with the license
 - Pillow==7.1.2
 
 ## Test
-For direct testing, please download our prepared checkpoints and features from 
+For direct testing, please download our prepared checkpoints and extracted features from 
 [baidu disk](https://pan.baidu.com/s/17yfHjKDhUevtfPLdgTMrNw?pwd=bupt).
 
 #### 1) Baseline
 
 Then run the following command to load the checkpoint, and you will get the results of baseline.
 ```shell script
-python test.py ----test_ckpt_path path/ckpt/ckpt_res34_real.pth
+python test.py --test_ckpt_path path/ckpt/ckpt_res34_real.pth
 ```
 
 #### 2) AuxNet
@@ -62,7 +62,7 @@ you can directly use the following command to perform re-ranking based on our ex
 python re_ranking.py --test_feat_path path/feat
 ```
 
-If you want to extract these all these features by yourself, please the following commands:
+If you want to extract all these features by yourself, please use the following commands:
 ```shell script
 python test.py --test_ckpt_path path/ckpt/ckpt_res34_real_auxiliary.pth --test_frame_sample uniform-first_half-second_half
 python test.py --test_ckpt_path path/ckpt/ckpt_res34_fake_auxiliary.pth --test_frame_sample uniform-first_half-second_half --fake
@@ -72,7 +72,7 @@ Then run `re_ranking.py`,  and you will get the final metrics of AuxNet.
 ## Train
 
 #### 1) Baseline
-You can train our baseline modole by:
+You can train our baseline module by:
 ```shell script
 python train.py --gpus 0,1
 ```
@@ -91,12 +91,12 @@ python train.py --gpus 0,1 --auxiliary --fake
 ```
 Then you will get the checkpoints corresponding to the provided `ckpt_res34_fake_auxiliary.pth`
 
-Finally, for evaluation, please refer to the "Test" section above (feature extraction + re_ranking).
+Finally, for evaluation, please refer to the `Test` section above (feature extraction + re_ranking).
 
 ## Citation
 TBD
 
 ## Acknowledgement
 A large part of codes are borrowed from 
-[DDAG](https://github.com/mangye16/DDAG) and[FastReID](https://github.com/JDAI-CV/fast-reid).
+[DDAG](https://github.com/mangye16/DDAG) and [FastReID](https://github.com/JDAI-CV/fast-reid).
 Thanks for their excellent work!
