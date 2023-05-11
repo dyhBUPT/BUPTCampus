@@ -100,4 +100,3 @@ TBD
 A large part of codes are borrowed from 
 [DDAG](https://github.com/mangye16/DDAG) and[FastReID](https://github.com/JDAI-CV/fast-reid).
 Thanks for their excellent work!
->>>>>>> d494a9a... init commit
