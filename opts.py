@@ -21,6 +21,7 @@ class opts:
         self.parser.add_argument('--data_root', type=str, default='/data1/dyh/data/VIData/BUPTCampus/DATA')
         self.parser.add_argument('--save_dir', type=str, default='/data1/dyh/results/BUPTCampus/tmp')
         self.parser.add_argument('--fake', action='store_true', default=False)
+        self.parser.add_argument('--feature_postfix', type=str, default='')
 
         # basic parameters
         self.parser.add_argument('--num_workers', type=int, default=4)

@@ -121,15 +121,7 @@ if __name__ == '__main__':
     os.environ['CUDA_VISIBLE_DEVICES'] = opt.gpus
     model = get_model(opt, class_num=1074)
     model, _ = load_from_ckpt(model, 'model', opt.test_ckpt_path)
-
-    postfix = ''
-    if 'real' in opt.test_ckpt_path:
-        postfix += '_real'
-    elif 'fake' in opt.test_ckpt_path:
-        postfix += '_fake'
-    if 'auxiliary' in opt.test_ckpt_path:
-        postfix += '-aux'
-
+    postfix = opt.feature_postfix
     frame_samples = opt.test_frame_sample.split('-')
     for frame_sample in frame_samples:
         print('Frame Sample: {}'.format(frame_sample))

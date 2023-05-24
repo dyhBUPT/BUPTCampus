@@ -223,13 +223,6 @@ if __name__ == '__main__':
             tmp_distance += (tmp_distance_1to2 + tmp_distance_2to1) * lambda_2
         '''evaluate'''
         tmp_qid, tmp_gid = query_pids[q_mask], gallery_pids[g_mask]
-        tmp_qcid, tmp_gcid  = query_cids[q_mask], gallery_cids[g_mask]
-        os.makedirs(f'{directory}/distmat', exist_ok=True)
-        torch.save(tmp_distance, f'{directory}/distmat/{MODALITY_[q_modal]}2{MODALITY_[g_modal]}_distmat.pth')
-        torch.save(tmp_qid, f'{directory}/distmat/{MODALITY_[q_modal]}2{MODALITY_[g_modal]}_qid.pth')
-        torch.save(tmp_gid, f'{directory}/distmat/{MODALITY_[q_modal]}2{MODALITY_[g_modal]}_gid.pth')
-        torch.save(tmp_qcid, f'{directory}/distmat/{MODALITY_[q_modal]}2{MODALITY_[g_modal]}_qcid.pth')
-        torch.save(tmp_gcid, f'{directory}/distmat/{MODALITY_[q_modal]}2{MODALITY_[g_modal]}_gcid.pth')
         tmp_cmc, tmp_ap = evaluate(tmp_distance, tmp_qid, tmp_gid, opt)
         print_metrics(
             tmp_cmc, tmp_ap,

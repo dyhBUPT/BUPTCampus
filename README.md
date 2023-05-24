@@ -64,8 +64,8 @@ python re_ranking.py --test_feat_path path/feat
 
 If you want to extract all these features by yourself, please use the following commands:
 ```shell script
-python test.py --test_ckpt_path path/ckpt/ckpt_res34_real_auxiliary.pth --test_frame_sample uniform-first_half-second_half
-python test.py --test_ckpt_path path/ckpt/ckpt_res34_fake_auxiliary.pth --test_frame_sample uniform-first_half-second_half --fake
+python test.py --test_ckpt_path path/ckpt/ckpt_res34_real_auxiliary.pth --test_frame_sample uniform-first_half-second_half --feature_postfix _real-aux
+python test.py --test_ckpt_path path/ckpt/ckpt_res34_fake_auxiliary.pth --test_frame_sample uniform-first_half-second_half --feature_postfix _real-aux --fake
 ```
 Then run `re_ranking.py`,  and you will get the final metrics of AuxNet.
 
