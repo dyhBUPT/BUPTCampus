@@ -100,7 +100,17 @@ Then you will get the checkpoints corresponding to the provided `ckpt_res34_fake
 Finally, for evaluation, please refer to the `Test` section above (feature extraction + re_ranking).
 
 ## Citation
-TBD
+```
+@ARTICLE{10335724,
+  author={Du, Yunhao and Lei, Cheng and Zhao, Zhicheng and Dong, Yuan and Su, Fei},
+  journal={IEEE Transactions on Information Forensics and Security}, 
+  title={Video-based Visible-Infrared Person Re-Identification with Auxiliary Samples}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={1-1},
+  doi={10.1109/TIFS.2023.3337972}}
+```
 
 ## Acknowledgement
 A large part of codes are borrowed from 
