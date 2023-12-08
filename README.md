@@ -104,11 +104,11 @@ Finally, for evaluation, please refer to the `Test` section above (feature extra
 @ARTICLE{10335724,
   author={Du, Yunhao and Lei, Cheng and Zhao, Zhicheng and Dong, Yuan and Su, Fei},
   journal={IEEE Transactions on Information Forensics and Security}, 
-  title={Video-based Visible-Infrared Person Re-Identification with Auxiliary Samples}, 
-  year={2023},
-  volume={},
+  title={Video-Based Visible-Infrared Person Re-Identification With Auxiliary Samples}, 
+  year={2024},
+  volume={19},
   number={},
-  pages={1-1},
+  pages={1313-1325},
   doi={10.1109/TIFS.2023.3337972}}
 ```
 
