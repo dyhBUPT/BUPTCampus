@@ -3,7 +3,7 @@ BUPTCampus is a video-based visible-infrared dataset
 with approximately pixel-level aligned tracklet pairs
 and single-camera auxiliary samples.
 
-The paper is accepted by **IEEE Transactions on Information Forensics & Security (TIFS)** 2023.
+The [paper](https://ieeexplore.ieee.org/document/10335724) is accepted by **IEEE Transactions on Information Forensics & Security (TIFS)** 2023.
 
 ![radar](assets/radar.png)
 
