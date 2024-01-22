@@ -3,7 +3,13 @@ BUPTCampus is a video-based visible-infrared dataset
 with approximately pixel-level aligned tracklet pairs
 and single-camera auxiliary samples.
 
+The [paper](https://ieeexplore.ieee.org/document/10335724) is accepted by **IEEE Transactions on Information Forensics & Security (TIFS)** 2023.
+
 ![radar](assets/radar.png)
+
+## Abstract 
+
+Visible-infrared person re-identification (VI-ReID) aims to match persons captured by visible and infrared cameras, allowing person retrieval and tracking in 24-hour surveillance systems. Previous methods focus on learning from cross-modality person images in different cameras. However, temporal information and single-camera samples tend to be neglected. To crack this nut, in this paper, we first contribute a large-scale VI-ReID dataset named BUPTCampus. Different from most existing VI-ReID datasets, it 1) collects tracklets instead of images to introduce rich temporal information,  2) contains pixel-aligned cross-modality sample pairs for better modality-invariant learning, 3) provides one auxiliary set to help enhance the  optimization, in which each identity only appears in a single camera. Based on our constructed dataset, we present a two-stream framework as baseline and apply Generative Adversarial Network (GAN) to narrow the gap between the two modalities. To exploit the advantages introduced by the auxiliary set, we propose a curriculum learning based strategy to jointly learn from both primary and auxiliary sets. Moreover, we design a novel temporal k-reciprocal re-ranking method to refine the ranking list with fine-grained temporal correlation cues. Experimental results demonstrate the effectiveness of the proposed methods. We also reproduce 9 state-of-the-art image-based and video-based VI-ReID methods on BUPTCampus and our methods show substantial superiority to them. The codes and dataset are available at: https://github.com/dyhBUPT/BUPTCampus.
 
 ## Experiments
 
@@ -13,7 +19,7 @@ and single-camera auxiliary samples.
 
 ## Data Preparation
 
-1\. Download BUPTCampus from baidu disk (TBD). The file structure should be:
+1\. Download BUPTCampus from [baidu disk](https://pan.baidu.com/s/1GlAlNoSWUuvaGPjOzK4jqQ?pwd=bupt). The file structure should be:
 ```
 path_to_dataset
 |—— DATA
@@ -94,7 +100,17 @@ Then you will get the checkpoints corresponding to the provided `ckpt_res34_fake
 Finally, for evaluation, please refer to the `Test` section above (feature extraction + re_ranking).
 
 ## Citation
-TBD
+```
+@ARTICLE{10335724,
+  author={Du, Yunhao and Lei, Cheng and Zhao, Zhicheng and Dong, Yuan and Su, Fei},
+  journal={IEEE Transactions on Information Forensics and Security}, 
+  title={Video-Based Visible-Infrared Person Re-Identification With Auxiliary Samples}, 
+  year={2024},
+  volume={19},
+  number={},
+  pages={1313-1325},
+  doi={10.1109/TIFS.2023.3337972}}
+```
 
 ## Acknowledgement
 A large part of codes are borrowed from 
